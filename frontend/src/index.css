@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #0055A4;
+  /* Stark Blue — main buttons, links */
+  --color-secondary-red: #E53935;
+  /* Widow Red — delete buttons, alerts */
+  --color-primary-white: #F9FAFB;
+  /* Clean White — background, cards */
+  --color-secondary-gray: #CCCCCC;
+  /* Shield Gray — borders, muted text */
+  --color-text-dark: #2E2E2E;
+  /* Vibranium Gray — headings, card text */
+  --color-success-green: #43A047;
+  /* Hulk Green — success messages */
+  --color-accent-yellow: #F9A825;
+  /* Vision Gold — highlights, hover */
+}
+
+body {
+  background-color: var(--color-primary-white);
+}
