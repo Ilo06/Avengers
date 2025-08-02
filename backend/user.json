@@ -37,10 +37,94 @@
       "universe": "Earth-616"
     },
     {
-      "id": "9",
-      "name": "a",
-      "realName": "a",
-      "universe": "z"
+      "id": 7,
+      "name": "Thor",
+      "realName": "Thor Odinson",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 8,
+      "name": "Hawkeye",
+      "realName": "Clint Barton",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 9,
+      "name": "Scarlet Witch",
+      "realName": "Wanda Maximoff",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 10,
+      "name": "Vision",
+      "realName": "Vision",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 11,
+      "name": "Ant-Man",
+      "realName": "Scott Lang",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 12,
+      "name": "Captain Marvel",
+      "realName": "Carol Danvers",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 13,
+      "name": "Wolverine",
+      "realName": "Logan",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 14,
+      "name": "Deadpool",
+      "realName": "Wade Wilson",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 15,
+      "name": "Groot",
+      "realName": "Groot",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 16,
+      "name": "Star-Lord",
+      "realName": "Peter Quill",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 17,
+      "name": "Drax the Destroyer",
+      "realName": "Drax",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 18,
+      "name": "Rocket Raccoon",
+      "realName": "Rocket",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 19,
+      "name": "Jean Grey",
+      "realName": "Jean Grey",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 20,
+      "name": "Professor X",
+      "realName": "Charles Xavier",
+      "universe": "Earth-616"
+    },
+    {
+      "id": 21,
+      "name": "Magneto",
+      "realName": "Erik Lehnsherr",
+      "universe": "Earth-616"
     }
   ]
 }

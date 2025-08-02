@@ -1,4 +1,4 @@
-export default function AvengerCard({ id, name, realName, universe, onDelete }) {
+export default function AvengerCard({ id, name, realName, universe, onDelete, onEdit }) {
   async function deleteChar(id) {
     try {
       const response = await fetch(`http://localhost:8080/characters/${id}`, {
@@ -6,13 +6,13 @@ export default function AvengerCard({ id, name, realName, universe, onDelete }) 
       });
 
       if (!response.ok) {
-        throw new Error("Échec de la suppression");
+        const message = await response.text();
+        throw new Error(`Échec de la suppression: ${response.status} - ${message}`);
       }
 
       if (onDelete) {
-        onDelete(id); 
+        onDelete(id);
       }
-      
     } catch (error) {
       console.error("Erreur lors de la suppression du personnage :", error);
     }
@@ -39,6 +39,7 @@ export default function AvengerCard({ id, name, realName, universe, onDelete }) 
       <div className="flex space-x-4 mt-4">
         <button
           type="button"
+          onClick={() => onEdit && onEdit({ id, name, realName, universe })}
           className="flex-1 py-2 px-4 border border-[color:var(--color-secondary-gray)] text-[color:var(--color-text-dark)] rounded-md hover:bg-[color:var(--color-secondary-gray)] font-body font-bold transition flex items-center justify-center gap-2"
         >
           <i className="bx bx-edit text-lg"></i>
