@@ -27,15 +27,25 @@ exports.createCharacter = (req, res) => {
         const data = readData();
         const newCharacter = req.body;
 
-        data.characters.push(newCharacter);
+        const newId = data.characters.length > 0
+            ? Math.max(...data.characters.map(c => c.id)) + 1
+            : 1;
+
+        const characterToAdd = {
+            id: newId,
+            ...newCharacter
+        };
+
+        data.characters.push(characterToAdd);
         writeData(data);
 
-        res.status(201).send(data);
+        res.status(201).send(characterToAdd); // renvoyer uniquement le nouveau perso
     } catch (error) {
         console.error(error);
         res.status(500).send({ error: "Server error" });
     }
 };
+
 
 exports.getCharacterById = (req, res) => {
     try {

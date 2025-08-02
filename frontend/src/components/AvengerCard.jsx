@@ -1,4 +1,23 @@
-export default function AvengerCard({ id, name, realName, universe }) {
+export default function AvengerCard({ id, name, realName, universe, onDelete }) {
+  async function deleteChar(id) {
+    try {
+      const response = await fetch(`http://localhost:8080/characters/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Échec de la suppression");
+      }
+
+      if (onDelete) {
+        onDelete(id); 
+      }
+      
+    } catch (error) {
+      console.error("Erreur lors de la suppression du personnage :", error);
+    }
+  }
+
   return (
     <div className="max-w-sm w-full bg-neutral-200 rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
       <div className="mb-4 space-y-1">
@@ -27,6 +46,7 @@ export default function AvengerCard({ id, name, realName, universe }) {
         </button>
         <button
           type="button"
+          onClick={() => deleteChar(id)}
           className="flex-1 py-2 px-4 bg-[color:var(--color-secondary-red)] text-[color:var(--color-primary-white)] rounded-md hover:bg-red-700 font-body font-bold transition flex items-center justify-center gap-2"
         >
           <i className="bx bx-trash text-lg"></i>

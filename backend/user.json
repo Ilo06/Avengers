@@ -37,22 +37,10 @@
       "universe": "Earth-616"
     },
     {
-      "id": 7,
-      "name": "Scarlet Witch",
-      "realName": "Wanda Maximoff",
-      "universe": "Earth-616"
-    },
-    {
-      "id": 8,
-      "name": "Hulk",
-      "realName": "Bruce Banner",
-      "universe": "Earth-616"
-    },
-    {
       "id": "9",
-      "name": "AZERTYUIOP",
-      "realName": "Qwerty Uiop",
-      "universe": "Lorem Ipsum"
+      "name": "a",
+      "realName": "a",
+      "universe": "z"
     }
   ]
 }
