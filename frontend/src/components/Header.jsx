@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Header() {
+export default function Header({isOpen, setIsOpen}) {
   const [search, setSearch] = useState("");
 
   return (
@@ -12,6 +12,7 @@ export default function Header() {
           type="button"
           aria-label="Add new character"
           className="text-[color:var(--color-primary-white)] hover:text-[color:var(--color-accent-yellow)] transition text-3xl"
+          onClick={() => setIsOpen(true)}
         >
           <i className="bx bx-plus-circle"></i>
         </button>

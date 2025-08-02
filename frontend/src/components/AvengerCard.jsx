@@ -1,8 +1,8 @@
 export default function AvengerCard({ id, name, realName, universe }) {
   return (
-    <div className="max-w-sm w-full bg-[color:var(--color-primary-white)] rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+    <div className="max-w-sm w-full bg-neutral-200 rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
       <div className="mb-4 space-y-1">
-        <p className="text-sm text-[color:var(--color-secondary-gray)] font-body">ID: {id}</p>
+        <p className="text-sm text-black font-body">ID: {id}</p>
 
         <h2 className="text-3xl font-hero-title text-[color:var(--color-text-dark)] flex items-center gap-2">
           <i className="bx bx-shield text-[color:var(--color-primary-blue)] text-2xl"></i>
