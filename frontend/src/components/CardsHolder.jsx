@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import AvengerCard from "./AvengerCard";
 
 export default function CardsHolder() {
-  const [data, setData] = useState([]); // initialize as empty array
+  const [data, setData] = useState([]); 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch(`http://localhost:8080/characters`);
-        const characters = await res.json(); // directly the array
+        const characters = await res.json();
         setData(characters);
       } catch (error) {
         console.log(error);

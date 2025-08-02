@@ -1,22 +1,44 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;700&display=swap');
 
-@theme {
+:root {
   --color-primary-blue: #0055A4;
-  /* Stark Blue — main buttons, links */
   --color-secondary-red: #E53935;
-  /* Widow Red — delete buttons, alerts */
   --color-primary-white: #F9FAFB;
-  /* Clean White — background, cards */
   --color-secondary-gray: #CCCCCC;
-  /* Shield Gray — borders, muted text */
   --color-text-dark: #2E2E2E;
-  /* Vibranium Gray — headings, card text */
   --color-success-green: #43A047;
-  /* Hulk Green — success messages */
   --color-accent-yellow: #F9A825;
-  /* Vision Gold — highlights, hover */
 }
 
 body {
   background-color: var(--color-primary-white);
+  font-family: 'Fredoka', sans-serif;
+  color: var(--color-text-dark);
+}
+
+h1, .font-hero-title {
+  font-family: 'Bangers', cursive;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2, .font-subtitle {
+  font-family: 'Bangers', cursive;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+p, .font-body {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 400;
+}
+
+button, .btn {
+  font-family: 'Bangers', cursive;
+  font-style: italic;
+  font-weight: bold;
+  text-transform: uppercase;
 }

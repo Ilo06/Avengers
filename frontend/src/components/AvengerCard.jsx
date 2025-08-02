@@ -1,27 +1,35 @@
 export default function AvengerCard({ id, name, realName, universe }) {
   return (
-    <div className="max-w-sm w-full bg-white rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
-      <div className="mb-4">
-        <p className="text-sm text-gray-400">ID: {id}</p>
-        <h2 className="text-3xl font-extrabold text-gray-900">{name}</h2>
-        <p className="mt-1 text-gray-700">
+    <div className="max-w-sm w-full bg-[color:var(--color-primary-white)] rounded-lg shadow-md p-6 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+      <div className="mb-4 space-y-1">
+        <p className="text-sm text-[color:var(--color-secondary-gray)] font-body">ID: {id}</p>
+
+        <h2 className="text-3xl font-hero-title text-[color:var(--color-text-dark)] flex items-center gap-2">
+          <i className="bx bx-shield text-[color:var(--color-primary-blue)] text-2xl"></i>
+          {name}
+        </h2>
+
+        <p className="text-[color:var(--color-text-dark)] font-body">
           <span className="font-semibold">Real Name:</span> {realName}
         </p>
-        <p className="mt-1 text-gray-700">
+        <p className="text-[color:var(--color-text-dark)] font-body">
           <span className="font-semibold">Universe:</span> {universe}
         </p>
       </div>
-      <div className="flex space-x-4">
+
+      <div className="flex space-x-4 mt-4">
         <button
           type="button"
-          className="flex-1 py-2 px-4 border border-gray-300 rounded-md text-gray-800 hover:bg-gray-100 transition"
+          className="flex-1 py-2 px-4 border border-[color:var(--color-secondary-gray)] text-[color:var(--color-text-dark)] rounded-md hover:bg-[color:var(--color-secondary-gray)] font-body font-bold transition flex items-center justify-center gap-2"
         >
+          <i className="bx bx-edit text-lg"></i>
           Update
         </button>
         <button
           type="button"
-          className="flex-1 py-2 px-4 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
+          className="flex-1 py-2 px-4 bg-[color:var(--color-secondary-red)] text-[color:var(--color-primary-white)] rounded-md hover:bg-red-700 font-body font-bold transition flex items-center justify-center gap-2"
         >
+          <i className="bx bx-trash text-lg"></i>
           Remove
         </button>
       </div>
